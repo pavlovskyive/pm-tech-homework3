@@ -158,7 +158,7 @@ class ViewController: UIViewController {
                     self.circleView.center.x += 30
                 }
                 
-                // I could use force unwrap here, but I forcing something is not really my style 🙂
+                // I could use force unwrap here, but forcing something is not really my style 🙂
                 self.currentColor = self.colors.filter({ $0 != self.currentColor }).randomElement() ?? self.colors[2]
                 
                 self.circleView.backgroundColor = self.currentColor
