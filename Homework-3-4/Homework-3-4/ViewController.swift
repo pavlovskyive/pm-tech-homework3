@@ -9,6 +9,13 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    // MARK: - Variables
+    var isValidationErrorShown: Bool = false {
+        didSet {
+            animateTextFieldBorderColor()
+        }
+    }
+    
     // MARK: - Views
     
     lazy var footballImage = UIImage(named: "Football")
@@ -76,7 +83,7 @@ class ViewController: UIViewController {
         return button
     }()
     
-    // MARK: - Controller lifecycle
+    // MARK: - ViewController lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -88,6 +95,8 @@ class ViewController: UIViewController {
     // MARK: - Setups
     
     func setupViews() {
+        view.backgroundColor = .systemBackground
+        
         view.addSubview(footballImageView)
         view.addSubview(sloganLabel)
         view.addSubview(textField)
@@ -96,6 +105,9 @@ class ViewController: UIViewController {
         
         textField.addTarget(self, action: #selector(handleEditingChanged(_:)), for: .editingChanged)
         
+        detailsButton.addTarget(self, action: #selector(handleButton), for: .touchUpInside)
+        
+        // Don't mind this
         let swipeRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(self.handleFootballSwipe(_:)))
         swipeRecognizer.direction = .down
         
@@ -130,25 +142,39 @@ class ViewController: UIViewController {
     
     // MARK: - Functions
     
+    func animateTextFieldBorderColor() {
+        var color = textField.isFirstResponder ? UIColor.blue.withAlphaComponent(0.5) : UIColor.init(white: 0.5, alpha: 0.5)
+        color = isValidationErrorShown ? UIColor.red : color
+        
+        let animation:CABasicAnimation = CABasicAnimation(keyPath: "borderColor")
+        animation.fromValue = textField.layer.borderColor
+        animation.toValue = color.cgColor
+        animation.duration = 0.5
+        textField.layer.add(animation, forKey: "borderColor")
+        textField.layer.borderColor = color.cgColor
+    }
+    
     // Make validation label visible and assign validation error text to it
     func showValidationError(_ error: String) {
+        isValidationErrorShown = true
+        
         validationLabel.text = error
         
         UIView.animate(
             withDuration: 0.5,
             animations: {
                 self.validationLabel.alpha = 1
-                self.textField.backgroundColor = UIColor.systemRed.withAlphaComponent(0.1)
             })
     }
     
     // Make validation label invisible when input is OK
     func hideValidationError() {
+        isValidationErrorShown = false
+        
         UIView.animate(
             withDuration: 1,
             animations: {
                 self.validationLabel.alpha = 0
-                self.textField.backgroundColor = .clear
             },
             completion: { isEnded in
                 if isEnded {
@@ -192,8 +218,7 @@ class ViewController: UIViewController {
         validateTextField()
     }
     
-    // Easter egg 🐣 Try to swipe down the football ⚽️ on device or in simulator.
-    // P.S. I wouldn't do it if I was assigned to a real project at work, but here we should have a bit of fun, right?
+    // Just for fun. If there is a ball, it should spin
     @objc func handleFootballSwipe(_ sender: UISwipeGestureRecognizer) {
         let spinAnimation = CABasicAnimation.init(keyPath: "transform.rotation")
         let direction: Float = Bool.random() == true ? 1 : -1
@@ -203,6 +228,13 @@ class ViewController: UIViewController {
         spinAnimation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut)
         footballImageView.layer.add(spinAnimation, forKey: "spinAnimation")
     }
+    
+    @objc func handleButton() {
+        guard let username = textField.text else { return }
+        let detailViewController = DetailViewController()
+        detailViewController.username = username
+        present(detailViewController, animated: true)
+    }
 }
 
 extension ViewController: UITextFieldDelegate {
@@ -210,11 +242,18 @@ extension ViewController: UITextFieldDelegate {
     // Hide keyboard when user touch outside of keyboard
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
+        animateTextFieldBorderColor()
+    }
+    
+    // Change border color when text field is first responder
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        animateTextFieldBorderColor()
     }
 
     // Hide keyboard when user press return
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
+        animateTextFieldBorderColor()
         
         return true
     }
