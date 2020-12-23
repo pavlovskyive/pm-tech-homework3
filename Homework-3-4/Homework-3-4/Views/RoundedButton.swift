@@ -8,7 +8,7 @@
 import UIKit
 
 class RoundedButton: UIButton {
-
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
@@ -51,7 +51,8 @@ class RoundedButton: UIButton {
         layer.cornerRadius = 8
         backgroundColor = .systemRed
         setTitleColor(.white, for: .normal)
-        titleLabel?.font = UIFont.systemFont(ofSize: 25, weight: .bold)
-        contentEdgeInsets = UIEdgeInsets(top: 15, left: 0, bottom: 15, right: 0)
+        titleLabel?.font = .preferredFont(forTextStyle: .title3, weight: .bold)
+        titleLabel?.adjustsFontForContentSizeCategory = true
+        contentEdgeInsets = UIEdgeInsets(top: 15.adjusted, left: 0, bottom: 15.adjusted, right: 0)
     }
 }

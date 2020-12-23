@@ -10,6 +10,7 @@ import UIKit
 class ViewController: UIViewController {
     
     // MARK: - Variables
+    
     var isValidationErrorShown: Bool = false {
         didSet {
             animateTextFieldBorderColor()
@@ -18,9 +19,8 @@ class ViewController: UIViewController {
     
     // MARK: - Views
     
-    lazy var footballImage = UIImage(named: "Football")
-    
     lazy var footballImageView: UIImageView = {
+        let footballImage = UIImage(named: "Football")
         let imageView = UIImageView(image: footballImage)
         imageView.translatesAutoresizingMaskIntoConstraints = false
         
@@ -29,8 +29,8 @@ class ViewController: UIViewController {
     
     lazy var sloganLabel: UILabel = {
         var label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 35, weight: .heavy)
-        label.adjustsFontSizeToFitWidth = true
+        label.font = .preferredFont(forTextStyle: .title1, weight: .bold)
+        label.adjustsFontForContentSizeCategory = true
         label.text = "Beyound Limits"
         label.textAlignment = .center
         
@@ -47,7 +47,8 @@ class ViewController: UIViewController {
         textField.textContentType = .username
         textField.autocapitalizationType = .none
         textField.autocorrectionType = .no
-        textField.font = UIFont.systemFont(ofSize: 20)
+        textField.font = .preferredFont(forTextStyle: .title3)
+        textField.adjustsFontForContentSizeCategory = true
         textField.layer.cornerRadius = 8
         textField.layer.masksToBounds = true
         textField.layer.borderColor = UIColor(white: 0.5, alpha: 0.5).cgColor
@@ -66,6 +67,8 @@ class ViewController: UIViewController {
         label.textColor = .systemRed
         label.numberOfLines = 5
         label.alpha = 0
+        label.font = .preferredFont(forTextStyle: .callout)
+        label.adjustsFontForContentSizeCategory = true
         
         label.translatesAutoresizingMaskIntoConstraints = false
         
@@ -117,25 +120,25 @@ class ViewController: UIViewController {
     
     func setupConstraints() {
         NSLayoutConstraint.activate([
-            footballImageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),
-            footballImageView.widthAnchor.constraint(equalTo: view.safeAreaLayoutGuide.widthAnchor, multiplier: 0.65),
+            footballImageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20.adjusted),
+            footballImageView.widthAnchor.constraint(equalTo: view.safeAreaLayoutGuide.heightAnchor, multiplier: 0.3),
             footballImageView.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
             footballImageView.heightAnchor.constraint(equalTo: footballImageView.widthAnchor),
             
             sloganLabel.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
-            sloganLabel.topAnchor.constraint(equalTo: footballImageView.bottomAnchor, constant: 20),
-            sloganLabel.widthAnchor.constraint(equalTo: footballImageView.widthAnchor),
+            sloganLabel.topAnchor.constraint(equalTo: footballImageView.bottomAnchor, constant: 20.adjusted),
+            sloganLabel.widthAnchor.constraint(equalTo: view.safeAreaLayoutGuide.widthAnchor),
             
             textField.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
-            textField.topAnchor.constraint(equalTo: sloganLabel.bottomAnchor, constant: 30),
+            textField.topAnchor.constraint(equalTo: sloganLabel.bottomAnchor, constant: 20.adjusted),
             textField.widthAnchor.constraint(equalTo: view.safeAreaLayoutGuide.widthAnchor, multiplier: 0.8),
             
             validationLabel.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
-            validationLabel.topAnchor.constraint(equalTo: textField.bottomAnchor, constant: 5),
+            validationLabel.topAnchor.constraint(equalTo: textField.bottomAnchor, constant: 5.adjusted),
             validationLabel.widthAnchor.constraint(equalTo: textField.widthAnchor),
             
             detailsButton.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
-            detailsButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -20),
+            detailsButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -20.adjusted),
             detailsButton.widthAnchor.constraint(equalTo: view.safeAreaLayoutGuide.widthAnchor, multiplier: 0.9),
         ])
     }

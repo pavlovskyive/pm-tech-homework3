@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		79AE4B7E2590919700254AD4 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AE4B7D2590919700254AD4 /* DetailViewController.swift */; };
+		79C51ED62593611900EAAF98 /* PreferredFontTraits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C51ED52593611800EAAF98 /* PreferredFontTraits.swift */; };
 		79EAD817258F9E2F00D7288C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EAD816258F9E2F00D7288C /* AppDelegate.swift */; };
 		79EAD819258F9E2F00D7288C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EAD818258F9E2F00D7288C /* SceneDelegate.swift */; };
 		79EAD81B258F9E2F00D7288C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EAD81A258F9E2F00D7288C /* ViewController.swift */; };
@@ -15,10 +16,13 @@
 		79EAD823258F9E3000D7288C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79EAD821258F9E3000D7288C /* LaunchScreen.storyboard */; };
 		79EAD82D258F9FBF00D7288C /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EAD82C258F9FBF00D7288C /* RoundedButton.swift */; };
 		79EAD831258FAE7C00D7288C /* PaddingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EAD830258FAE7C00D7288C /* PaddingTextField.swift */; };
+		79F856F825927E1E006C29BD /* AdjustSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F856F725927E1D006C29BD /* AdjustSize.swift */; };
+		79F856FD259282BB006C29BD /* StatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F856FB259282BB006C29BD /* StatsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		79AE4B7D2590919700254AD4 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		79C51ED52593611800EAAF98 /* PreferredFontTraits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferredFontTraits.swift; sourceTree = "<group>"; };
 		79EAD813258F9E2F00D7288C /* Homework-3-4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Homework-3-4.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		79EAD816258F9E2F00D7288C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		79EAD818258F9E2F00D7288C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -28,6 +32,8 @@
 		79EAD824258F9E3000D7288C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		79EAD82C258F9FBF00D7288C /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		79EAD830258FAE7C00D7288C /* PaddingTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingTextField.swift; sourceTree = "<group>"; };
+		79F856F725927E1D006C29BD /* AdjustSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdjustSize.swift; sourceTree = "<group>"; };
+		79F856FB259282BB006C29BD /* StatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +66,7 @@
 		79EAD815258F9E2F00D7288C /* Homework-3-4 */ = {
 			isa = PBXGroup;
 			children = (
+				79F856F625927DF7006C29BD /* Extensions */,
 				79EAD82B258F9F8A00D7288C /* Views */,
 				79EAD816258F9E2F00D7288C /* AppDelegate.swift */,
 				79EAD818258F9E2F00D7288C /* SceneDelegate.swift */,
@@ -68,6 +75,7 @@
 				79EAD81F258F9E3000D7288C /* Assets.xcassets */,
 				79EAD821258F9E3000D7288C /* LaunchScreen.storyboard */,
 				79EAD824258F9E3000D7288C /* Info.plist */,
+				79F856FB259282BB006C29BD /* StatsViewController.swift */,
 			);
 			path = "Homework-3-4";
 			sourceTree = "<group>";
@@ -79,6 +87,15 @@
 				79EAD830258FAE7C00D7288C /* PaddingTextField.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		79F856F625927DF7006C29BD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				79F856F725927E1D006C29BD /* AdjustSize.swift */,
+				79C51ED52593611800EAAF98 /* PreferredFontTraits.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,9 +169,12 @@
 			files = (
 				79EAD81B258F9E2F00D7288C /* ViewController.swift in Sources */,
 				79EAD817258F9E2F00D7288C /* AppDelegate.swift in Sources */,
+				79F856FD259282BB006C29BD /* StatsViewController.swift in Sources */,
 				79AE4B7E2590919700254AD4 /* DetailViewController.swift in Sources */,
 				79EAD819258F9E2F00D7288C /* SceneDelegate.swift in Sources */,
+				79F856F825927E1E006C29BD /* AdjustSize.swift in Sources */,
 				79EAD82D258F9FBF00D7288C /* RoundedButton.swift in Sources */,
+				79C51ED62593611900EAAF98 /* PreferredFontTraits.swift in Sources */,
 				79EAD831258FAE7C00D7288C /* PaddingTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
