@@ -1,0 +1,11 @@
+/*
+  LocalizedStrings.strings
+  Homework-3-4
+
+  Created by Vsevolod Pavlovskyi on 23.12.2020.
+  
+*/
+
+"Big Alert Title" = "Что такое Lorem Ipsum";
+
+"Alert Text" = "Lorem Ipsum - это текст-рыба, часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной рыбой для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов.";

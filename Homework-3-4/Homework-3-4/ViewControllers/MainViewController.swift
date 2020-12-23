@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MainViewController.swift
 //  Homework-3-4
 //
 //  Created by Vsevolod Pavlovskyi on 20.12.2020.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class MainViewController: UIViewController {
     
     // MARK: - Variables
     
@@ -240,7 +240,7 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: UITextFieldDelegate {
+extension MainViewController: UITextFieldDelegate {
     
     // Hide keyboard when user touch outside of keyboard
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

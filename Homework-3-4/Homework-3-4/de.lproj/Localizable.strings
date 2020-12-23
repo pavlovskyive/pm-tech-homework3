@@ -1,0 +1,11 @@
+/*
+  LocalizedStrings.strings
+  Homework-3-4
+
+  Created by Vsevolod Pavlovskyi on 23.12.2020.
+  
+*/
+
+"Big Alert Title" = "Was ist Lorem Ipsum";
+
+"Alert Text" = "Lorem Ipsum ist ein einfacher Demo-Text für die Print- und Schriftindustrie. Lorem Ipsum ist in der Industrie bereits der Standard Demo-Text seit 1500, als ein unbekannter Schriftsteller eine Hand voll Wörter nahm und diese durcheinander warf um ein Musterbuch zu erstellen.";

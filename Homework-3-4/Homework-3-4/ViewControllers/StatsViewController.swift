@@ -167,6 +167,8 @@ class StatsViewController: UIViewController {
         view.addSubview(rightStatsLabel)
         view.addSubview(leftStatsNumberLabel)
         view.addSubview(rightStatsNumberLabel)
+        
+        button.addTarget(self, action: #selector(handleButton), for: .touchUpInside)
     }
     
     func setupConstraints() {
@@ -203,8 +205,19 @@ class StatsViewController: UIViewController {
             rightStatsNumberLabel.topAnchor.constraint(equalTo: rightStatsLabel.bottomAnchor, constant: 5.adjusted),
             rightStatsNumberLabel.leadingAnchor.constraint(equalTo: rightStatsLabel.leadingAnchor),
             rightStatsNumberLabel.trailingAnchor.constraint(equalTo: button.trailingAnchor),
-            
-//            rightStatsNumberLabel.widthAnchor.constraint(equalTo: leftStatsNumberLabel.widthAnchor)
         ])
+    }
+    
+    @objc func handleButton() {
+        
+        let alertVC = AlertViewController()
+        
+        alertVC.modalPresentationStyle = .overFullScreen
+        alertVC.modalTransitionStyle = .crossDissolve
+        
+        self.present(alertVC, animated: true, completion: nil)
+        
+        alertVC.alertTitle.text = NSLocalizedString("Big Alert Title", comment: "Alert title")
+        alertVC.alertText.text = NSLocalizedString("Alert Text", comment: "Alert text")
     }
 }

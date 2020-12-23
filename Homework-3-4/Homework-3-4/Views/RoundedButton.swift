@@ -7,7 +7,7 @@
 
 import UIKit
 
-class RoundedButton: UIButton {
+@IBDesignable class RoundedButton: UIButton {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -16,7 +16,7 @@ class RoundedButton: UIButton {
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        fatalError("init(coder:) has not been implemented")
+        setup()
     }
     
     // Users love when everything responds to their actions, so I added an animation on user's press
