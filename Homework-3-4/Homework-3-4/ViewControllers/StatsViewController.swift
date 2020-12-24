@@ -11,6 +11,8 @@ class StatsViewController: UIViewController {
     
     // MARK: - Variables
     
+    // I really don't know, is it better to reasign image directly from parent view or like that. I hope I will get a feedback on that
+    
     var leftImageName: String = "game-icon" {
         didSet {
             leftImageView.image = UIImage(named: leftImageName)
@@ -20,30 +22,6 @@ class StatsViewController: UIViewController {
     var rightImageName: String = "game-icon" {
         didSet {
             rightImageView.image = UIImage(named: rightImageName)
-        }
-    }
-    
-    var leftStatsName: String = "Games" {
-        didSet {
-            leftStatsLabel.text = leftStatsName
-        }
-    }
-    
-    var rightStatsName: String = "Games" {
-        didSet {
-            rightStatsLabel.text = rightStatsName
-        }
-    }
-    
-    var leftStatsNumber: Int = 1234 {
-        didSet {
-            leftStatsNumberLabel.text = String(leftStatsNumber)
-        }
-    }
-    
-    var rightStatsNumber: Int = 1234 {
-        didSet {
-            rightStatsNumberLabel.text = String(rightStatsNumber)
         }
     }
     
@@ -73,7 +51,7 @@ class StatsViewController: UIViewController {
     
     lazy var leftStatsLabel: UILabel = {
         let label = UILabel()
-        label.text = "Games"
+        label.text = "Games".localized
         label.font = .preferredFont(forTextStyle: .headline, weight: .bold)
         label.adjustsFontForContentSizeCategory = true
         label.adjustsFontSizeToFitWidth = true
@@ -85,7 +63,7 @@ class StatsViewController: UIViewController {
     
     lazy var rightStatsLabel: UILabel = {
         let label = UILabel()
-        label.text = "Games"
+        label.text = "Games".localized
         label.font = .preferredFont(forTextStyle: .headline, weight: .bold)
         label.adjustsFontForContentSizeCategory = true
         label.adjustsFontSizeToFitWidth = true
@@ -121,7 +99,7 @@ class StatsViewController: UIViewController {
     
     lazy var button: UIButton = {
         let button = RoundedButton()
-        button.setTitle("Check Stats", for: .normal)
+        button.setTitle("Check Stats".localized, for: .normal)
         
         button.translatesAutoresizingMaskIntoConstraints = false
         
@@ -159,7 +137,6 @@ class StatsViewController: UIViewController {
         view.layer.cornerRadius = 10
         view.layer.masksToBounds = true
         
-//        view.addSubview(stackView)
         view.addSubview(button)
         view.addSubview(leftImageView)
         view.addSubview(rightImageView)
@@ -217,7 +194,7 @@ class StatsViewController: UIViewController {
         
         self.present(alertVC, animated: true, completion: nil)
         
-        alertVC.alertTitle.text = NSLocalizedString("Big Alert Title", comment: "Alert title")
-        alertVC.alertText.text = NSLocalizedString("Alert Text", comment: "Alert text")
+        alertVC.alertTitle.text = "What is Lorem Ipsum".localized
+        alertVC.alertText.text = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.".localized
     }
 }

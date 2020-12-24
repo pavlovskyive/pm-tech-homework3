@@ -7,6 +7,8 @@
 
 import UIKit
 
+// This extension helps to set a weight to preffered font. I don't know why Apple didn't implement that by default.
+
 extension UIFont {
     static func preferredFont(forTextStyle style: TextStyle, weight: Weight) -> UIFont {
         let metrics = UIFontMetrics(forTextStyle: style)

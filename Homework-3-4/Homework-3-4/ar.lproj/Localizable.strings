@@ -6,6 +6,28 @@
   
 */
 
-"Big Alert Title" = "ما فائدته";
+"Beyond Limits" = "خارج الحدود";
 
-"Alert Text" = "هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها. ولذلك يتم استخدام طريقة لوريم إيبسوم لأنها تعطي توزيعاَ طبيعياَ -إلى حد ما- للأحرف عوضاً عن استخدام هنا يوجد محتوى نصي، هنا يوجد محتوى نصي فتجعلها تبدو (أي الأحرف) وكأنها نص مقروء.";
+"Enter username" = "ادخل اسم المستخدم";
+
+"Give Me Some Details" = "أعطني بعض تفاصيل";
+
+"Username can only contain latin symbols, numbers, dots, underscores or dashes." = ".اسمالمستخدم يمكن أن تحتوي فقط اللاتينية الرموز والأرقام، النقاط، سفلية أو شرطات";
+
+"Player enthusiast" = "متحمس لاعب";
+
+"Lorem ipsum text since Jan 2015" = "النص أبجد هوز منذ يناير 2015";
+
+"Videos" = "أشرطة فيديو";
+
+"Hearts" = "قلوب";
+
+"Games" = "ألعاب";
+
+"Wins" = "انتصارات";
+
+"Check Stats" = "تحقق إحصائيات";
+
+"What is Lorem Ipsum" = "ما فائدته";
+
+"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged." = "هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها. ولذلك يتم استخدام طريقة لوريم إيبسوم لأنها تعطي توزيعاَ طبيعياَ -إلى حد ما- للأحرف عوضاً عن استخدام هنا يوجد محتوى نصي، هنا يوجد محتوى نصي فتجعلها تبدو (أي الأحرف) وكأنها نص مقروء.";

@@ -6,6 +6,28 @@
   
 */
 
-"Big Alert Title" = "Qu'est-ce que le Lorem Ipsum";
+"Beyond Limits" = "Au-delà des limites";
 
-"Alert Text" = "Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. ";
+"Enter username" = "Saisissez votre nom d'utilisateur";
+
+"Give Me Some Details" = "Donnez-moi des détails";
+
+"Username can only contain latin symbols, numbers, dots, underscores or dashes." = "Nom d'utilisateur ne peut contenir des symboles latins, des chiffres, des points, des tirets ou des underscores.";
+
+"Player enthusiast" = "Joueur passionné";
+
+"Lorem ipsum text since Jan 2015" = "Lorem ipsum texte depuis janvier 2015";
+
+"Videos" = "Vidéos";
+
+"Hearts" = "Cœurs";
+
+"Games" = "Jeux";
+
+"Wins" = "Wins";
+
+"Check Stats" = "Vérifier les statistiques";
+
+"What is Lorem Ipsum" = "Qu'est-ce que le Lorem Ipsum";
+
+"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged." = "Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. ";

@@ -6,6 +6,28 @@
   
 */
 
-"Big Alert Title" = "Что такое Lorem Ipsum";
+"Beyond Limits" = "Переходя все границы";
 
-"Alert Text" = "Lorem Ipsum - это текст-рыба, часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной рыбой для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов.";
+"Enter username" = "Введите имя пользователя";
+
+"Give Me Some Details" = "Покажи мне детали!";
+
+"Username can only contain latin symbols, numbers, dots, underscores or dashes." = "Имя пользователя может содержать только латинские символы, цифры, точки, подчеркивания и тире.";
+
+"Player enthusiast" = "Игрок-энтузиаст";
+
+"Lorem ipsum text since Jan 2015" = "Lorem Ipsum текст с января 2015 года";
+
+"Videos" = "Видео";
+
+"Hearts" = "Сердца";
+
+"Games" = "Игры";
+
+"Wins" = "Выигрыши";
+
+"Check Stats" = "Проверить статистику";
+
+"What is Lorem Ipsum" = "Что такое Lorem Ipsum";
+
+"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged." = "Lorem Ipsum - это текст-рыба, часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной рыбой для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов.";

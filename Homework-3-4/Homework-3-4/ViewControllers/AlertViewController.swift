@@ -14,6 +14,7 @@ class AlertViewController: UIViewController {
     @IBOutlet weak var alertTitle: UILabel!
     @IBOutlet weak var alertText: UILabel!
     
+    // I read that layer changes should be handled in viewDidLayoutSubviews, hope that's right.
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         

@@ -54,6 +54,8 @@ class ViewController: UIViewController {
     
     // MARK: - Animations
     
+    // Sorry I didn't have time to make Bezier path variations of animations because stuck on the fourth task trying to implement animations for UITextField on focus and validation error. UIKit is still a blank hole in my knowledge.
+    
     // First animation
     func animateScaling() {
         
@@ -64,8 +66,7 @@ class ViewController: UIViewController {
             animations: {
                 let scale = CGAffineTransform(scaleX: 2, y: 2)
                 self.scalingBox.transform = scale
-           }
-        )
+           })
     }
     
     // Second animation
@@ -73,7 +74,7 @@ class ViewController: UIViewController {
         
         // I didn't like that animate() made colors' transitions smooth because in the assignment animations were instant. I didn't find any simpler solution to make this task as it was shown in the assignment.
         
-        let boxColors: [UIColor] = [.black, .red, .green, .orange, .white, ]
+        let boxColors: [UIColor] = [.black, .red, .green, .orange, .white]
         let circleColors: [UIColor] = [.white, .blue, .yellow, .systemPink, .black]
         
         var currentColorIndex = 0
@@ -104,6 +105,8 @@ class ViewController: UIViewController {
         
         // I know I could use .reverse instead of running reverse animation inside completion, and I  know there is a .repeate option to use instead of recursive calling this function, but this animation should have a delay before the start and before the reverse animations in the assignment, so this is what I came up with.
         
+        // Also, there is a reason I go with the rotating container: performance is better than animating two views. The second reason is that I didn't have time to completely understand how to implement circle-moving animations, as you will see in task #3, where I just added KeyFrames for each step.
+        
         UIView.animate(
             withDuration: 1.0,
             delay: 0.5,
@@ -119,11 +122,7 @@ class ViewController: UIViewController {
                     animations: {
                         let rotation = CGAffineTransform(rotationAngle: -2 * CGFloat.pi)
                         self.rotatingContainer.transform = rotation
-                    }, completion: { _ in self.animateRotation()}
-                )
-            }
-        )
-        
-        // This code hurts my eyes as much as it hurts yours.
+                    }, completion: { _ in self.animateRotation()})
+            })
     }
 }

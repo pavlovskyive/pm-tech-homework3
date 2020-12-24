@@ -7,10 +7,13 @@
 
 import UIKit
 
+// Entry point of application
+
 class MainViewController: UIViewController {
     
     // MARK: - Variables
     
+    // Everytime validation error is shown or hidden, change textfield border color. I don't think this is a valid solution, it looks kinda clumsy, but this is all I could come up with.
     var isValidationErrorShown: Bool = false {
         didSet {
             animateTextFieldBorderColor()
@@ -31,7 +34,7 @@ class MainViewController: UIViewController {
         var label = UILabel()
         label.font = .preferredFont(forTextStyle: .title1, weight: .bold)
         label.adjustsFontForContentSizeCategory = true
-        label.text = "Beyound Limits"
+        label.text = "Beyond Limits".localized
         label.textAlignment = .center
         
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -42,7 +45,7 @@ class MainViewController: UIViewController {
     // Username input
     lazy var textField: UITextField = {
         var textField = PaddingTextField()
-        textField.placeholder = "Enter username"
+        textField.placeholder = "Enter username".localized
         textField.textAlignment = .center
         textField.textContentType = .username
         textField.autocapitalizationType = .none
@@ -78,7 +81,7 @@ class MainViewController: UIViewController {
     // Bottom button for transition to next controller
     lazy var detailsButton: UIButton = {
         let button = RoundedButton()
-        button.setTitle("Give Me Some Details", for: .normal)
+        button.setTitle("Give Me Some Details".localized, for: .normal)
         button.isEnabled = false
         
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -145,6 +148,7 @@ class MainViewController: UIViewController {
     
     // MARK: - Functions
     
+    // TextField border color is blue if it is focused, red if there is a validation error and grey by default
     func animateTextFieldBorderColor() {
         var color = textField.isFirstResponder ? UIColor.blue.withAlphaComponent(0.5) : UIColor.init(white: 0.5, alpha: 0.5)
         color = isValidationErrorShown ? UIColor.red : color
@@ -186,7 +190,7 @@ class MainViewController: UIViewController {
             })
     }
     
-    // validateTextField checks if input is valid (e.g. consists only of latin symbols, numbers, dot, undercsore or dashes. I just assumed this would be acceptable symbols, there was no word about it, but go without validation seems mad to me. Also I wanted to know how to implement this in UIKit so sorry if I shouldn't have done this
+    // validateTextField checks if input is valid (e.g. consists only of latin symbols, numbers, dot, undercsore or dashes. I just assumed this would be acceptable symbols, there was no word about it, but go without validation seems mad to me. Also I wanted to know how to implement this in UIKit so sorry if I shouldn't have done this.
     func validateTextField() {
         guard let text = textField.text, !text.isEmpty else {
             detailsButton.isEnabled = false
@@ -200,7 +204,7 @@ class MainViewController: UIViewController {
             
             if regex.firstMatch(in: text, options: [], range: NSMakeRange(0, text.count)) != nil {
                 detailsButton.isEnabled = false
-                showValidationError("Username can contain only alphabetic symbols, numbers, dots, underscores or dashes.")
+                showValidationError("Username can only contain latin symbols, numbers, dots, underscores or dashes.".localized)
                 
                 return
             }
@@ -209,7 +213,7 @@ class MainViewController: UIViewController {
             hideValidationError()
             
         } catch {
-            // Even regex is save in swift omg.
+            // Even regex should be safe in swift omg.
             preconditionFailure("Illegal regular expression.")
         }
     }

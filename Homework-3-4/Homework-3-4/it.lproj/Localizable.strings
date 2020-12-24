@@ -6,6 +6,28 @@
   
 */
 
-"Big Alert Title" = "Cos’è Lorem Ipsum";
+"Beyond Limits" = "Oltre i Limiti";
 
-"Alert Text" = "Lorem Ipsum è un testo segnaposto utilizzato nel settore della tipografia e della stampa. Lorem Ipsum è considerato il testo segnaposto standard sin dal sedicesimo secolo, quando un anonimo tipografo prese una cassetta di caratteri e li assemblò per preparare un testo campione.";
+"Enter username" = "Inserire username";
+
+"Give Me Some Details" = "Dammi alcuni dettagli";
+
+"Username can only contain latin symbols, numbers, dots, underscores or dashes." = "Nome utente può contenere solo latino simboli, numeri, punti, trattini o trattini.";
+
+"Player enthusiast" = "Appassionato di giocatori";
+
+"Lorem ipsum text since Jan 2015" = "Testo ipsum Lorem dal gennaio 2015";
+
+"Videos" = "Video";
+
+"Hearts" = "Cuori";
+
+"Games" = "Giochi";
+
+"Wins" = "Vittorie";
+
+"Check Stats" = "Controllare Statistiche";
+
+"What is Lorem Ipsum" = "Cos’è Lorem Ipsum";
+
+"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged." = "Lorem Ipsum è un testo segnaposto utilizzato nel settore della tipografia e della stampa. Lorem Ipsum è considerato il testo segnaposto standard sin dal sedicesimo secolo, quando un anonimo tipografo prese una cassetta di caratteri e li assemblò per preparare un testo campione.";

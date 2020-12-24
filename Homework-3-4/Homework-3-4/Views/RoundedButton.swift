@@ -7,6 +7,8 @@
 
 import UIKit
 
+// Button with rounded corners
+
 @IBDesignable class RoundedButton: UIButton {
     
     override init(frame: CGRect) {

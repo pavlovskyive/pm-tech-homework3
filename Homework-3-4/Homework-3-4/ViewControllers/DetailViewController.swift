@@ -52,7 +52,7 @@ class DetailViewController: UIViewController {
     
     lazy var profileDescriptionLabel: UILabel = {
         let label = UILabel()
-        label.text = "Player enthusiast"
+        label.text = "Player enthusiast".localized
         label.font = .preferredFont(forTextStyle: .title1)
         label.adjustsFontForContentSizeCategory = true
         label.adjustsFontSizeToFitWidth = true
@@ -67,7 +67,7 @@ class DetailViewController: UIViewController {
     lazy var bottomLabel: UILabel = {
         let label = UILabel()
         label.textColor = .secondaryLabel
-        label.text = "Lorem ipsum text since Jan 2015"
+        label.text = "Lorem ipsum text since Jan 2015".localized
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = .preferredFont(forTextStyle: .body, weight: .medium)
         label.adjustsFontForContentSizeCategory = true
@@ -167,20 +167,20 @@ class DetailViewController: UIViewController {
         bottomStatsViewController.didMove(toParent: self)
         
         topStatsViewController.leftImageName = "video-icon"
-        topStatsViewController.leftStatsName = "Videos"
-        topStatsViewController.leftStatsNumber = 124
+        topStatsViewController.leftStatsLabel.text = "Videos".localized
+        topStatsViewController.leftStatsNumberLabel.text = String(124)
         
         topStatsViewController.rightImageName = "heart-icon"
-        topStatsViewController.rightStatsName = "Hearts"
-        topStatsViewController.rightStatsNumber = 5483
-        
+        topStatsViewController.rightStatsLabel.text = "Hearts".localized
+        topStatsViewController.rightStatsNumberLabel.text = String(5483)
+    
         bottomStatsViewController.leftImageName = "game-icon"
-        bottomStatsViewController.leftStatsName = "Games"
-        bottomStatsViewController.leftStatsNumber = 453
+        bottomStatsViewController.leftStatsLabel.text = "Games".localized
+        bottomStatsViewController.leftStatsNumberLabel.text = String(543)
         
         bottomStatsViewController.rightImageName = "win-icon"
-        bottomStatsViewController.rightStatsName = "Wins"
-        bottomStatsViewController.rightStatsNumber = 340
+        bottomStatsViewController.rightStatsLabel.text = "Wins".localized
+        bottomStatsViewController.rightStatsNumberLabel.text = String(340)
     }
     
     // MARK: - Actions
