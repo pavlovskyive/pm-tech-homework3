@@ -1,8 +1,8 @@
 //
 //  SceneDelegate.swift
-//  Homework-3-1
+//  Homework-3-1-2
 //
-//  Created by Vsevolod Pavlovskyi on 18.12.2020.
+//  Created by Vsevolod Pavlovskyi on 24.12.2020.
 //
 
 import UIKit
